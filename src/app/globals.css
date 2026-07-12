@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
+/* ═══════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors */
+  --primary:     #1D4338;
+  --primary-2:   #2D6655;
+  --accent:      #6C9B82;
+  --text:        #173B34;
+  --muted:       #6F7D77;
+
+  /* Surfaces */
+  --bg:          #EDF8F2;
+  --bg-2:        #E5F6EC;
+  --bg-3:        #D5EEE0;
+  --surface:     #FFFFFF;
+  --surface-2:   #F5FBF7;
+
+  /* Borders */
+  --border:      rgba(255,255,255,.55);
+  --border-soft: rgba(213,238,224,.6);
+
+  /* Shadows */
+  --shadow-soft:    0 8px 32px rgba(0,0,0,.06);
+  --shadow:         0 25px 60px rgba(0,0,0,.08);
+  --shadow-lg:      0 40px 100px rgba(18,45,36,.14);
+  --shadow-shell:   0 0 0 1px rgba(255,255,255,.5),
+                    0 32px 80px rgba(18,45,36,.12),
+                    0 80px 160px rgba(18,45,36,.08);
+
+  /* Radius */
+  --radius-btn:      999px;
+  --radius-card:     36px;
+  --radius-card-xl:  48px;
+  --radius-shell:    42px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ═══════════════════════════════════════
+   BASE
+═══════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  font-family: var(--font-inter), Inter, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ═══════════════════════════════════════
+   TYPOGRAPHY
+═══════════════════════════════════════ */
+.heading-font {
+  font-family: var(--font-heading), "Cormorant Garamond", Georgia, serif;
+}
+
+/* ═══════════════════════════════════════
+   GLASS SURFACES
+═══════════════════════════════════════ */
+.glass {
+  background: rgba(255,255,255,.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+}
+
+.glass-strong {
+  background: rgba(255,255,255,.88);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(255,255,255,.7);
+}
+
+.glass-dark {
+  background: rgba(29,67,56,.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+/* ═══════════════════════════════════════
+   SHADOWS
+═══════════════════════════════════════ */
+.shadow-soft    { box-shadow: var(--shadow-soft); }
+.shadow-premium { box-shadow: var(--shadow); }
+.hero-shadow    { box-shadow: var(--shadow); }
+.shadow-lg-card { box-shadow: var(--shadow-lg); }
+
+/* ═══════════════════════════════════════
+   RADIUS
+═══════════════════════════════════════ */
+.rounded-btn     { border-radius: var(--radius-btn); }
+.rounded-card    { border-radius: var(--radius-card); }
+.rounded-xl-card { border-radius: var(--radius-card-xl); }
+
+/* ═══════════════════════════════════════
+   SPACING
+═══════════════════════════════════════ */
+.section-spacing   { padding-top: 6rem;  padding-bottom: 6rem; }
+.container-spacing { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+@media (min-width: 1024px) {
+  .container-spacing { padding-left: 3rem; padding-right: 3rem; }
 }
