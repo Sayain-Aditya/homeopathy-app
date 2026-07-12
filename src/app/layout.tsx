@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond } from "next/font/google";
 import PageLayout from "@/components/layout/PageLayout";
 import ScrollProgress from "@/components/ui/ScrollProgress";
+import WhatsAppFloater from "@/components/ui/WhatsAppFloater";
 import "./globals.css";
 
 const inter = Inter({
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable} ${cormorant.variable}`}>
         <ScrollProgress />
         <PageLayout>{children}</PageLayout>
+        <WhatsAppFloater />
       </body>
     </html>
   );

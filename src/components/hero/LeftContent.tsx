@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, ShieldCheck, Clock, Users, ArrowRight, Phone } from "lucide-react";
+import { ShieldCheck, Clock, Users, ArrowRight, Phone } from "lucide-react";
 import Link from "next/link";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
@@ -55,7 +55,7 @@ export default function LeftContent() {
         </div>
         <div>
           <p className="text-[15px] font-bold text-white">Dr. Asmita Shekhar</p>
-          <p className="text-[12px] text-white/50">BHMS · CGO · CCH · Regn. No. H032158</p>
+          <p className="text-[12px] text-white/50">BHMS · CGO · CCH</p>
           <p className="mt-0.5 text-[12px] font-semibold text-emerald-400">
             Specialist in Chronic Diseases
           </p>
@@ -102,22 +102,7 @@ export default function LeftContent() {
         ))}
       </motion.div>
 
-      {/* Stars */}
-      <motion.div variants={fadeUp} className="mt-4 flex items-center gap-2">
-        <div className="flex">
-          {[...Array(5)].map((_, i) => (
-            <motion.span
-              key={i}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.8 + i * 0.07, type: "spring", stiffness: 300 }}
-            >
-              <Star size={13} className="text-amber-400" fill="currentColor" />
-            </motion.span>
-          ))}
-        </div>
-        <span className="text-[12px] text-white/40">4.9 / 5 · Based on 1,200+ reviews</span>
-      </motion.div>
+
     </motion.div>
   );
 }
