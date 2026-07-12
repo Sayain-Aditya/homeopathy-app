@@ -7,7 +7,7 @@ import { fadeUp, staggerFast } from "@/lib/animations";
 
 export default function FloatingServices() {
   return (
-    <div className="pb-10 pt-2">
+    <div className="pb-10 pt-0">
       <motion.div
         className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 xl:grid-cols-6"
         variants={staggerFast}

@@ -1,21 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, ShieldCheck, Clock, Users } from "lucide-react";
-import Button from "@/components/ui/Button";
+import { Star, ShieldCheck, Clock, Users, ArrowRight, Phone } from "lucide-react";
 import Link from "next/link";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const trust = [
   { icon: Users,       label: "10,000+ Patients" },
   { icon: Clock,       label: "Evening 5–7 PM" },
-  { icon: ShieldCheck, label: "BHMS. CGO. CCH" },
+  { icon: ShieldCheck, label: "BHMS · CGO · CCH" },
 ];
 
 export default function LeftContent() {
   return (
     <motion.div
-      className="max-w-[560px] space-y-3"
+      className="max-w-[580px]"
       variants={staggerContainer}
       initial="hidden"
       animate="show"
@@ -23,71 +22,88 @@ export default function LeftContent() {
       {/* Badge */}
       <motion.div
         variants={fadeUp}
-        className="inline-flex items-center gap-2 rounded-full border border-[#C8E6D4] bg-white px-4 py-1.5"
+        className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 backdrop-blur-sm"
       >
-        <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
-        <span className="text-[11px] font-semibold uppercase tracking-[2px] text-[#2D6655]">
-          Advanced Homoeopathy Centre
+        <span className="relative flex h-2 w-2">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+        </span>
+        <span className="text-[11px] font-semibold uppercase tracking-[3px] text-emerald-300">
+          Now Accepting Patients
         </span>
       </motion.div>
 
-      {/* Clinic name */}
+      {/* Headline */}
       <motion.h1
         variants={fadeUp}
-      className="mt-5 text-[36px] font-extrabold leading-[1.05] tracking-[-1.5px] text-[#1D4338] sm:text-[44px] lg:text-[60px]"
+        className="mt-6 text-[38px] font-extrabold leading-[1.05] tracking-[-2px] text-white sm:text-[50px] lg:text-[64px]"
       >
-        NAIVEDYA
+        Natural Healing
         <br />
-        <span className="text-[#2D6655]">HOMOEOPATHY</span>
-        <br />
-        <span className="text-[20px] font-medium tracking-normal italic text-[#4a8a6e] sm:text-[24px] lg:text-[32px]">
-          Embrace Healing From Within
+        <span className="bg-gradient-to-r from-[#6C9B82] to-[#A8D5B5] bg-clip-text text-transparent">
+          From Within
         </span>
       </motion.h1>
 
-      {/* Doctor info */}
+      {/* Doctor card */}
       <motion.div
         variants={fadeUp}
-        className="mt-3 rounded-2xl border border-[#C8E6D4] bg-white/70 px-5 py-3"
+        className="mt-6 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-sm"
       >
-        <p className="text-[15px] font-bold text-[#1D4338]">Dr. Asmita Shekhar</p>
-        <p className="text-[12px] text-[#6C9B82]">BHMS. CGO. CCH &nbsp;·&nbsp; Homoeopathic Consultant</p>
-        <p className="mt-1 text-[12px] font-semibold text-[#2D6655]">
-          Specialist in Chronic Diseases &nbsp;·&nbsp; Regn. No. H032158
-        </p>
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#2D6655] to-[#1D4338] text-[18px] font-bold text-white shadow-[0_0_20px_rgba(45,102,85,.5)]">
+          A
+        </div>
+        <div>
+          <p className="text-[15px] font-bold text-white">Dr. Asmita Shekhar</p>
+          <p className="text-[12px] text-white/50">BHMS · CGO · CCH · Regn. No. H032158</p>
+          <p className="mt-0.5 text-[12px] font-semibold text-emerald-400">
+            Specialist in Chronic Diseases
+          </p>
+        </div>
       </motion.div>
 
       {/* Subtitle */}
       <motion.p
         variants={fadeUp}
-        className="mt-3 max-w-[460px] text-[15px] leading-[1.9] text-[#6F7D77]"
+        className="mt-5 max-w-[460px] text-[15px] leading-[1.9] text-white/60"
       >
-        Personalized homoeopathic care that treats the root cause — not just the symptoms.
-        Safe, gentle, and tailored to your unique health journey.
-        Offline &amp; online consultation available on prior appointment.
+        Personalized homoeopathic care that treats the root cause — not just the
+        symptoms. Safe, gentle, and tailored to your unique health journey.
+        Offline &amp; online consultation available.
       </motion.p>
 
       {/* CTAs */}
-      <motion.div variants={fadeUp} className="mt-5 flex flex-wrap items-center gap-4">
-        <Link href="/contact">
-          <Button variant="secondary">Book Consultation</Button>
+      <motion.div variants={fadeUp} className="mt-8 flex flex-wrap items-center gap-3">
+        <Link
+          href="/contact"
+          className="flex items-center gap-2.5 rounded-[999px] bg-gradient-to-r from-[#2D6655] to-[#3D7A65] px-7 py-3.5 text-[14px] font-bold text-white shadow-[0_0_30px_rgba(45,102,85,.4)] transition-all hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(45,102,85,.6)]"
+        >
+          Book Consultation
+          <ArrowRight size={15} />
         </Link>
+        <a
+          href="tel:6394886307"
+          className="flex items-center gap-2.5 rounded-[999px] border border-white/15 bg-white/5 px-7 py-3.5 text-[14px] font-semibold text-white backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/10"
+        >
+          <Phone size={14} />
+          6394886307
+        </a>
       </motion.div>
 
       {/* Trust row */}
-      <motion.div variants={fadeUp} className="mt-3 flex flex-wrap items-center gap-4">
+      <motion.div variants={fadeUp} className="mt-8 flex flex-wrap items-center gap-5 border-t border-white/10 pt-6">
         {trust.map(({ icon: Icon, label }) => (
-          <div key={label} className="flex items-center gap-1.5">
-            <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#EEF8F2]">
-              <Icon size={12} className="text-[#2D6655]" />
+          <div key={label} className="flex items-center gap-2">
+            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-white/5">
+              <Icon size={13} className="text-emerald-400" />
             </div>
-            <span className="text-[12px] font-medium text-[#6F7D77]">{label}</span>
+            <span className="text-[12px] font-medium text-white/50">{label}</span>
           </div>
         ))}
       </motion.div>
 
       {/* Stars */}
-      <motion.div variants={fadeUp} className="mt-2 flex items-center gap-2">
+      <motion.div variants={fadeUp} className="mt-4 flex items-center gap-2">
         <div className="flex">
           {[...Array(5)].map((_, i) => (
             <motion.span
@@ -100,7 +116,7 @@ export default function LeftContent() {
             </motion.span>
           ))}
         </div>
-        <span className="text-[12px] text-[#6F7D77]">4.9/5 · <a href="tel:6394886307" className="hover:text-[#2D6655] transition-colors">Contact: 6394886307</a></span>
+        <span className="text-[12px] text-white/40">4.9 / 5 · Based on 1,200+ reviews</span>
       </motion.div>
     </motion.div>
   );

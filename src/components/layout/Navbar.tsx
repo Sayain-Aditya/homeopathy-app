@@ -14,10 +14,16 @@ const links = [
   { label: "Contact",  href: "/contact" },
 ];
 
-export default function Navbar() {
+interface NavbarProps {
+  variant?: "dark" | "light";
+}
+
+export default function Navbar({ variant = "dark" }: NavbarProps) {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const isLight = variant === "light";
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 10);
@@ -25,16 +31,15 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", fn);
   }, []);
 
-  // close menu on route change
   useEffect(() => { setMenuOpen(false); }, [pathname]);
 
   return (
     <div className="relative">
       <nav
-        className={`flex items-center justify-between rounded-[999px] bg-white px-4 py-3 sm:px-6 transition-all duration-300 ${
-          scrolled
-            ? "shadow-[0_8px_40px_rgba(29,67,56,.12)]"
-            : "shadow-[0_2px_16px_rgba(0,0,0,.06)]"
+        className={`flex items-center justify-between rounded-[999px] px-4 py-3 transition-all duration-300 sm:px-6 ${
+          isLight
+            ? `bg-white ${scrolled ? "shadow-[0_8px_40px_rgba(29,67,56,.12)]" : "shadow-[0_2px_16px_rgba(0,0,0,.06)]"}`
+            : `border border-white/10 bg-white/5 backdrop-blur-md ${scrolled ? "bg-[#0D2B22]/80 shadow-[0_8px_40px_rgba(0,0,0,.3)]" : ""}`
         }`}
       >
         {/* Logo */}
@@ -43,8 +48,8 @@ export default function Navbar() {
             <Leaf size={16} className="text-white" />
           </div>
           <div>
-            <p className="text-[15px] font-bold leading-none text-[#1D4338]">NAIVEDYA</p>
-            <p className="text-[9px] tracking-[3px] text-[#6C9B82]">HOMOEOPATHY</p>
+            <p className={`text-[15px] font-bold leading-none ${isLight ? "text-[#1D4338]" : "text-white"}`}>NAIVEDYA</p>
+            <p className={`text-[9px] tracking-[3px] ${isLight ? "text-[#6C9B82]" : "text-emerald-400"}`}>HOMOEOPATHY</p>
           </div>
         </Link>
 
@@ -55,9 +60,13 @@ export default function Navbar() {
               key={label}
               href={href}
               className={`rounded-full px-4 py-2 text-[13px] font-medium transition-all duration-200 ${
-                pathname === href
-                  ? "bg-[#EEF8F2] text-[#1D4338]"
-                  : "text-[#6F7D77] hover:bg-[#F5FBF7] hover:text-[#1D4338]"
+                isLight
+                  ? pathname === href
+                    ? "bg-[#EEF8F2] text-[#1D4338]"
+                    : "text-[#6F7D77] hover:bg-[#F5FBF7] hover:text-[#1D4338]"
+                  : pathname === href
+                    ? "bg-white/10 text-white"
+                    : "text-white/60 hover:bg-white/10 hover:text-white"
               }`}
             >
               {label}
@@ -75,10 +84,11 @@ export default function Navbar() {
             Book Consultation
           </Link>
 
-          {/* Hamburger */}
           <button
             onClick={() => setMenuOpen((v) => !v)}
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-[#EEF8F2] text-[#1D4338] lg:hidden"
+            className={`flex h-9 w-9 items-center justify-center rounded-full lg:hidden ${
+              isLight ? "bg-[#EEF8F2] text-[#1D4338]" : "border border-white/10 bg-white/10 text-white"
+            }`}
             aria-label="Toggle menu"
           >
             {menuOpen ? <X size={18} /> : <Menu size={18} />}
@@ -103,7 +113,7 @@ export default function Navbar() {
                   href={href}
                   className={`rounded-[14px] px-4 py-3 text-[14px] font-medium transition-all duration-200 ${
                     pathname === href
-                      ? "bg-[#EEF8F2] text-[#1D4338] font-semibold"
+                      ? "bg-[#EEF8F2] font-semibold text-[#1D4338]"
                       : "text-[#6F7D77] hover:bg-[#F5FBF7] hover:text-[#1D4338]"
                   }`}
                 >
