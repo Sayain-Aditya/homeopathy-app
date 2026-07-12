@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
+import Link from "next/link";
 import Container from "@/components/ui/Container";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
@@ -17,9 +18,9 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="bg-white py-24">
+    <section className="bg-[#F5FBF7] py-20 lg:py-28">
       <Container>
-        <div className="grid items-start gap-16 lg:grid-cols-[40%_60%]">
+        <div className="grid items-start gap-12 lg:grid-cols-[38%_62%]">
 
           {/* Left */}
           <motion.div
@@ -29,29 +30,28 @@ export default function FAQ() {
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
           >
-            <motion.span variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-[#C8E6D4] bg-[#F5FBF7] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[2px] text-[#2D6655]">
-              <HelpCircle size={11} />
-              FAQ
-            </motion.span>
-            <motion.h2 variants={fadeUp} className="mt-5 text-[32px] font-extrabold leading-[1.1] tracking-[-1px] text-[#1D4338] sm:text-[42px] lg:text-[50px]">
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-[#C8E6D4] bg-white px-4 py-1.5 shadow-[0_2px_12px_rgba(29,67,56,.06)]">
+              <HelpCircle size={11} className="text-[#2D6655]" />
+              <span className="text-[11px] font-semibold uppercase tracking-[3px] text-[#2D6655]">FAQ</span>
+            </motion.div>
+            <motion.h2 variants={fadeUp} className="mt-5 text-[36px] font-extrabold leading-[1.05] tracking-[-1.5px] text-[#0D2B22] sm:text-[44px] lg:text-[50px]">
               Frequently
               <br />
               Asked
               <br />
-              Questions
+              <span className="text-[#2D6655]">Questions</span>
             </motion.h2>
             <motion.p variants={fadeUp} className="mt-5 text-[15px] leading-[1.9] text-[#6F7D77]">
-              Have more questions? Feel free to reach out to our team — we&apos;re
-              happy to help you on your healing journey.
+              Have more questions? Feel free to reach out — we&apos;re happy to help you on your healing journey.
             </motion.p>
-            <motion.button
-              variants={fadeUp}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className="mt-8 flex items-center gap-2 rounded-[999px] border border-[#6C9B82] px-6 py-3 text-[13px] font-semibold text-[#1D4338] transition-all duration-200 hover:bg-[#1D4338] hover:text-white"
-            >
-              Contact Us
-            </motion.button>
+            <motion.div variants={fadeUp}>
+              <Link
+                href="/contact"
+                className="mt-8 inline-flex items-center gap-2 rounded-[999px] border border-[#2D6655] px-6 py-3 text-[13px] font-semibold text-[#1D4338] transition-all duration-200 hover:bg-[#1D4338] hover:text-white"
+              >
+                Contact Us
+              </Link>
+            </motion.div>
           </motion.div>
 
           {/* Right — accordion */}
@@ -66,17 +66,17 @@ export default function FAQ() {
               <motion.div
                 key={i}
                 variants={fadeUp}
-                className={`overflow-hidden rounded-[20px] border transition-colors duration-300 ${
+                className={`overflow-hidden rounded-[20px] border transition-all duration-300 ${
                   open === i
-                    ? "border-[#C8E6D4] bg-[#F9FDFB] shadow-[0_4px_24px_rgba(29,67,56,.08)]"
-                    : "border-[#F0F7F3] bg-white shadow-[0_2px_8px_rgba(0,0,0,.04)]"
+                    ? "border-[#C8E6D4] bg-white shadow-[0_4px_24px_rgba(29,67,56,.08)]"
+                    : "border-[#E8F5EE] bg-white/60 shadow-[0_2px_8px_rgba(0,0,0,.04)]"
                 }`}
               >
                 <button
                   onClick={() => setOpen(open === i ? null : i)}
                   className="flex w-full items-center justify-between px-7 py-5 text-left"
                 >
-                  <span className="text-[15px] font-semibold text-[#1D4338]">{faq.q}</span>
+                  <span className="text-[15px] font-semibold text-[#0D2B22]">{faq.q}</span>
                   <motion.div
                     animate={{ backgroundColor: open === i ? "#1D4338" : "#EEF8F2" }}
                     transition={{ duration: 0.25 }}

@@ -2,9 +2,9 @@
 
 import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { Award, Users, ThumbsUp, Activity } from "lucide-react";
+import { Award, Users, ThumbsUp, Activity, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import Container from "@/components/ui/Container";
-import Button from "@/components/ui/Button";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const stats = [
@@ -35,9 +35,9 @@ function CountUp({ to, suffix }: { to: number; suffix: string }) {
 
 export default function Dashboard() {
   return (
-    <section className="bg-white py-12">
+    <section className="bg-[#F5FBF7] py-20 lg:py-28">
       <Container>
-        <div className="grid items-center gap-10 lg:grid-cols-[55%_45%]">
+        <div className="grid items-center gap-12 lg:grid-cols-[55%_45%]">
 
           {/* Left — stats */}
           <motion.div
@@ -46,36 +46,36 @@ export default function Dashboard() {
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
           >
-            <motion.span variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-[#C8E6D4] bg-[#F5FBF7] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[2px] text-[#2D6655]">
-              Our Impact
-            </motion.span>
-            <motion.h2 variants={fadeUp} className="mt-3 text-[32px] font-extrabold leading-[1.05] tracking-[-1px] text-[#1D4338] sm:text-[42px] lg:text-[52px]">
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 rounded-full border border-[#C8E6D4] bg-white px-4 py-1.5 shadow-[0_2px_12px_rgba(29,67,56,.06)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              <span className="text-[11px] font-semibold uppercase tracking-[3px] text-[#2D6655]">Our Impact</span>
+            </motion.div>
+
+            <motion.h2 variants={fadeUp} className="mt-5 text-[36px] font-extrabold leading-[1.05] tracking-[-1.5px] text-[#0D2B22] sm:text-[44px] lg:text-[52px]">
               Healing Lives,
               <br />
-              Every Single Day
+              <span className="text-[#2D6655]">Every Single Day</span>
             </motion.h2>
-            <motion.p variants={fadeUp} className="mt-3 max-w-[420px] text-[15px] leading-[1.9] text-[#6F7D77]">
+
+            <motion.p variants={fadeUp} className="mt-5 max-w-[420px] text-[15px] leading-[1.9] text-[#6F7D77]">
               Our results speak for themselves. Thousands of patients have found
               lasting relief through personalized homeopathic care.
             </motion.p>
 
-            <motion.div
-              className="mt-6 grid grid-cols-2 gap-3"
-              variants={staggerContainer}
-            >
+            <motion.div className="mt-8 grid grid-cols-2 gap-4" variants={staggerContainer}>
               {stats.map((s) => {
                 const Icon = s.icon;
                 return (
                   <motion.div
                     key={s.label}
                     variants={fadeUp}
-                    whileHover={{ y: -4, borderColor: "#C8E6D4", boxShadow: "0 12px 40px rgba(29,67,56,.08)" }}
-                    className="group rounded-[20px] border border-[#EEF8F2] bg-[#F9FDFB] p-5 transition-colors duration-300"
+                    whileHover={{ y: -4, boxShadow: "0 12px 40px rgba(29,67,56,.10)" }}
+                    className="group rounded-[20px] border border-[#E8F5EE] bg-white p-5 shadow-[0_2px_12px_rgba(0,0,0,.04)] transition-all duration-300"
                   >
                     <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#EEF8F2] transition-transform duration-300 group-hover:scale-110">
                       <Icon size={17} className="text-[#2D6655]" />
                     </div>
-                    <p className="mt-3 text-[32px] font-extrabold leading-none text-[#1D4338] sm:text-[40px]">
+                    <p className="mt-3 text-[36px] font-extrabold leading-none text-[#0D2B22]">
                       <CountUp to={s.value} suffix={s.suffix} />
                     </p>
                     <p className="mt-1.5 text-[13px] font-semibold text-[#1D4338]">{s.label}</p>
@@ -92,7 +92,7 @@ export default function Dashboard() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="rounded-[32px] border border-[#E8F5EE] bg-[#F9FDFB] p-6 shadow-[0_4px_32px_rgba(29,67,56,.07)]"
+            className="rounded-[32px] border border-[#E8F5EE] bg-white p-8 shadow-[0_8px_48px_rgba(29,67,56,.08)]"
           >
             <span className="inline-flex items-center gap-2 rounded-full bg-[#EDF8F2] px-4 py-2 text-[11px] font-bold uppercase tracking-[2px] text-[#2D6655]">
               <span className="relative flex h-2 w-2">
@@ -102,18 +102,18 @@ export default function Dashboard() {
               Accepting New Patients
             </span>
 
-            <h3 className="mt-4 text-[32px] font-extrabold leading-tight tracking-[-0.5px] text-[#1D4338]">
+            <h3 className="mt-5 text-[28px] font-extrabold leading-tight tracking-[-0.5px] text-[#0D2B22]">
               Ready to Start
               <br />
               Your Healing Journey?
             </h3>
 
-            <p className="mt-4 text-[14px] leading-7 text-[#6F7D77]">
+            <p className="mt-3 text-[14px] leading-7 text-[#6F7D77]">
               Book a consultation with our expert homeopaths and receive a
               personalized treatment plan within 24 hours.
             </p>
 
-            <div className="mt-4 space-y-3 rounded-[20px] bg-white p-4 shadow-[0_2px_12px_rgba(0,0,0,.04)]">
+            <div className="mt-5 space-y-3 rounded-[20px] bg-[#F5FBF7] p-4">
               {[
                 ["Initial Consultation", "60 min"],
                 ["Follow-up Session", "30 min"],
@@ -128,19 +128,22 @@ export default function Dashboard() {
                   className="flex items-center justify-between text-[13px]"
                 >
                   <div className="flex items-center gap-2.5 text-[#2D6655]">
-                    <div className="h-1.5 w-1.5 rounded-full bg-[#6C9B82]" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
                     {label}
                   </div>
-                  <span className="rounded-full bg-[#EEF8F2] px-2.5 py-0.5 text-[11px] font-semibold text-[#2D6655]">
+                  <span className="rounded-full bg-white px-2.5 py-0.5 text-[11px] font-semibold text-[#2D6655] shadow-[0_1px_4px_rgba(0,0,0,.06)]">
                     {time}
                   </span>
                 </motion.div>
               ))}
             </div>
 
-            <div className="mt-7">
-              <Button className="w-full justify-center">Book Consultation</Button>
-            </div>
+            <Link
+              href="/contact"
+              className="mt-6 flex items-center justify-center gap-2.5 rounded-[999px] bg-gradient-to-r from-[#1D4338] to-[#2D6655] py-3.5 text-[14px] font-bold text-white shadow-[0_4px_20px_rgba(29,67,56,.25)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(29,67,56,.35)]"
+            >
+              Book Consultation <ArrowRight size={15} />
+            </Link>
           </motion.div>
 
         </div>

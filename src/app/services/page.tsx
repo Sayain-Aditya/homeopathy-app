@@ -17,7 +17,7 @@ export default function ServicesPage() {
       <section className="bg-[#EEF8F2]">
         <Container>
           <div className="pt-5">
-            <Navbar />
+            <Navbar variant="light" />
           </div>
         </Container>
 

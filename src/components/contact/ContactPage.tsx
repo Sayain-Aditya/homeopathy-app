@@ -57,7 +57,7 @@ export default function ContactPage() {
       <section className="bg-[#EEF8F2]">
         <Container>
           <div className="pt-5">
-            <Navbar />
+            <Navbar variant="light" />
           </div>
         </Container>
 
