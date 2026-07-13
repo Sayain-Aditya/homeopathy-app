@@ -17,7 +17,7 @@ const categories = [
 
 export default function ConditionsWeTreat() {
   return (
-    <section className="bg-[#F5FBF7] py-20 lg:py-28">
+    <section className="bg-[#F5FBF7] py-12 lg:py-20">
       <Container>
         <motion.div
           className="text-center"

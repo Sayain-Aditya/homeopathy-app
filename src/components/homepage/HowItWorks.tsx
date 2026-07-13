@@ -14,7 +14,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="relative overflow-hidden bg-[#0A2318] py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-[#0A2318] py-12 lg:py-16">
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/2 top-0 h-px w-3/4 -translate-x-1/2 opacity-20"
           style={{ background: "linear-gradient(90deg, transparent, #6C9B82, transparent)" }} />

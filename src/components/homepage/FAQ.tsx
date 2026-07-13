@@ -18,7 +18,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="bg-[#F5FBF7] py-20 lg:py-28">
+    <section className="bg-[#F5FBF7] py-12 lg:py-16">
       <Container>
         <div className="grid items-start gap-12 lg:grid-cols-[38%_62%]">
 

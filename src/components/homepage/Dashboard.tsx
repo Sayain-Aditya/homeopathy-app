@@ -35,7 +35,7 @@ function CountUp({ to, suffix }: { to: number; suffix: string }) {
 
 export default function Dashboard() {
   return (
-    <section className="bg-[#F5FBF7] py-20 lg:py-28">
+    <section className="bg-[#F5FBF7] py-12 lg:py-16">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-[55%_45%]">
 

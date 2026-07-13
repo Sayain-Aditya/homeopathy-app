@@ -1,8 +1,9 @@
 "use client";
 
-import { Leaf, Globe, Mail, Share2, MessageCircle, Heart, Phone, MapPin } from "lucide-react";
+import { Globe, Mail, Share2, MessageCircle, Heart, Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const nav = [
   {
@@ -85,15 +86,13 @@ export default function Footer() {
         >
           {/* Brand */}
           <motion.div variants={fadeUp} className="min-w-[200px] max-w-[220px]">
-            <div className="flex items-center gap-2.5">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-[#2D6655] to-[#1D4338]">
-                <Leaf size={15} className="text-white" />
-              </div>
+            <Link href="/" className="flex items-center gap-2.5">
+              <Image src="/images/logo.png" alt="Naivedya Homoeopathy" width={36} height={36} className="h-9 w-9 object-contain" />
               <div>
                 <p className="text-[14px] font-bold leading-none text-white">NAIVEDYA</p>
-                <p className="text-[9px] tracking-[3px] text-[#6C9B82]">HOMOEOPATHY</p>
+                <p className="text-[8px] tracking-[2px] text-[#6C9B82]">ADVANCED HOMOEOPATHY CENTRE</p>
               </div>
-            </div>
+            </Link>
             <p className="mt-4 text-[13px] leading-7 text-[#5A7070]">
               Advanced Homoeopathy Centre by Dr. Asmita Shekhar.
               Evening 5–7 PM · Sunday Closed · Regn. No. H032158
@@ -166,9 +165,6 @@ export default function Footer() {
           <div className="flex flex-col items-center justify-between gap-2 sm:flex-row">
             <p className="text-[12px] text-[#3A5050]">
               © 2025 Naivedya Advanced Homoeopathy Centre. All Rights Reserved.
-            </p>
-            <p className="flex items-center gap-1.5 text-[12px] text-[#3A5050]">
-              Made with <Heart size={11} className="text-rose-400" fill="currentColor" /> for Better Healthcare · Timing: Evening 5–7 PM · Sunday Closed
             </p>
           </div>
         </div>

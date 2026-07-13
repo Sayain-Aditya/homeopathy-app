@@ -14,7 +14,7 @@ const perks = [
 
 export default function FinalCTA() {
   return (
-    <section className="bg-[#F5FBF7] py-20 lg:py-28">
+    <section className="bg-[#F5FBF7] py-12 lg:py-16">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 40 }}

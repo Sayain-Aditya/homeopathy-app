@@ -14,7 +14,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative overflow-hidden bg-[#0A2318] py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-[#0A2318] py-12 lg:py-16">
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute -left-40 top-1/2 h-[400px] w-[400px] -translate-y-1/2 rounded-full opacity-10"
           style={{ background: "radial-gradient(circle, #2D6655, transparent 70%)" }} />

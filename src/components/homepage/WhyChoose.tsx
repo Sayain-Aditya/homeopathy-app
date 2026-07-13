@@ -15,7 +15,7 @@ const features = [
 
 export default function WhyChoose() {
   return (
-    <section className="relative overflow-hidden bg-[#0A2318] py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-[#0A2318] py-16 lg:py-24">
       {/* Background orbs */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute -right-40 top-0 h-[400px] w-[400px] rounded-full opacity-15"

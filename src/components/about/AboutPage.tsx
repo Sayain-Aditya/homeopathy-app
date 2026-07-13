@@ -213,7 +213,7 @@ export default function AboutPage() {
             >
               <div className="overflow-hidden rounded-[32px] shadow-[0_20px_60px_rgba(18,45,36,.15)]">
                 <Image
-                  src="/images/doctor.png"
+                  src="/images/Profile image.png"
                   alt="Dr. Asmita Shekhar"
                   width={600}
                   height={520}

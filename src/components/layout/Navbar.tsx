@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { Leaf, PhoneCall, Menu, X } from "lucide-react";
+import { PhoneCall, Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -65,12 +66,10 @@ export default function Navbar({ variant = "dark" }: NavbarProps) {
             {/* Header */}
             <div className="mb-4 flex items-center justify-between">
               <Link href="/" className="flex items-center gap-2.5" onClick={() => setMenuOpen(false)}>
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-[#1D4338] to-[#2D6655]">
-                  <Leaf size={14} className="text-white" />
-                </div>
+                <Image src="/images/logo.png" alt="Naivedya Homoeopathy" width={32} height={32} className="h-8 w-8 object-contain" />
                 <div>
                   <p className="text-[14px] font-bold leading-none text-white">NAIVEDYA</p>
-                  <p className="text-[8px] tracking-[3px] text-emerald-400">HOMOEOPATHY</p>
+                  <p className="text-[8px] tracking-[3px] text-emerald-400">ADVANCED HOMOEOPATHY CENTRE</p>
                 </div>
               </Link>
               <button
@@ -115,19 +114,17 @@ export default function Navbar({ variant = "dark" }: NavbarProps) {
   return (
     <>
       <nav
-        className={`flex items-center justify-between rounded-[999px] px-4 py-3 transition-all duration-300 sm:px-6 ${
+        className={`flex items-center justify-between rounded-[999px] px-3 py-2.5 transition-all duration-300 sm:px-4 ${
           isLight
             ? `bg-white ${scrolled ? "shadow-[0_8px_40px_rgba(29,67,56,.12)]" : "shadow-[0_2px_16px_rgba(0,0,0,.06)]"}`
             : `border border-white/10 bg-white/5 backdrop-blur-md ${scrolled ? "bg-[#0D2B22]/80 shadow-[0_8px_40px_rgba(0,0,0,.3)]" : ""}`
         }`}
       >
         <Link href="/" className="flex items-center gap-2.5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-[#1D4338] to-[#2D6655]">
-            <Leaf size={16} className="text-white" />
-          </div>
+          <Image src="/images/logo.png" alt="Naivedya Homoeopathy" width={36} height={36} className="h-9 w-9 object-contain" />
           <div>
             <p className={`text-[15px] font-bold leading-none ${isLight ? "text-[#1D4338]" : "text-white"}`}>NAIVEDYA</p>
-            <p className={`text-[9px] tracking-[3px] ${isLight ? "text-[#6C9B82]" : "text-emerald-400"}`}>HOMOEOPATHY</p>
+            <p className={`text-[9px] tracking-[3px] ${isLight ? "text-[#6C9B82]" : "text-emerald-400"}`}>ADVANCED HOMOEOPATHY CENTRE</p>
           </div>
         </Link>
 
