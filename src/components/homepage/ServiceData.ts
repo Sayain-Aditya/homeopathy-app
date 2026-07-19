@@ -1,4 +1,4 @@
-import { Brain, Smile, Zap, PersonStanding, TrendingUp, Eye, Ear, LucideIcon } from "lucide-react";
+import { Zap, PersonStanding, TrendingUp, Eye, Ear, LucideIcon } from "lucide-react";
 
 export interface Service {
   slug: string;
@@ -15,90 +15,6 @@ export interface Service {
 }
 
 export const services: Service[] = [
-  {
-    slug: "autism-spectrum-disorder",
-    title: "Autism Spectrum Disorder",
-    icon: Brain,
-    desc: "Behavioural, sensory & communication support for ASD.",
-    accent: "#6366F1",
-    bg: "#EEF0FF",
-    tagline: "Gentle support for every unique mind.",
-    overview:
-      "Autism Spectrum Disorder (ASD) is a complex neurodevelopmental condition affecting communication, behaviour, and social interaction. Homeopathy offers individualised constitutional treatment that addresses the child's unique symptom picture, supporting development and improving quality of life.",
-    conditions: [
-      "Speech & Language Delays",
-      "Sensory Processing Issues",
-      "Repetitive Behaviours",
-      "Social Communication Challenges",
-      "Hyperactivity & Attention Deficits",
-      "Sleep Disturbances",
-      "Digestive Issues associated with ASD",
-      "Emotional Dysregulation",
-    ],
-    howItHelps: [
-      {
-        title: "Constitutional Treatment",
-        body: "Each child with ASD presents differently. Homeopathy selects a remedy based on the complete individual picture — physical, mental, and emotional.",
-      },
-      {
-        title: "Supports Brain Development",
-        body: "Remedies work to improve neurological function, attention span, and sensory integration over time.",
-      },
-      {
-        title: "Safe & Non-Toxic",
-        body: "Homeopathic remedies are completely safe for children of all ages with no chemical side effects or drug interactions.",
-      },
-    ],
-    whatToExpect: [
-      "Detailed developmental and behavioural history",
-      "Constitutional remedy tailored to the child's unique profile",
-      "Gradual improvement in communication and behaviour",
-      "Monthly follow-ups to track developmental milestones",
-      "Parental guidance and support throughout treatment",
-    ],
-  },
-  {
-    slug: "down-syndrome",
-    title: "Down Syndrome",
-    icon: Smile,
-    desc: "Supportive care to enhance development & wellbeing.",
-    accent: "#10B981",
-    bg: "#ECFDF5",
-    tagline: "Nurturing potential at every step.",
-    overview:
-      "Down Syndrome is a chromosomal condition that affects physical and intellectual development. While homeopathy cannot alter genetics, it provides powerful supportive care — improving immunity, digestion, muscle tone, and cognitive function to help individuals thrive.",
-    conditions: [
-      "Low Muscle Tone (Hypotonia)",
-      "Recurrent Respiratory Infections",
-      "Digestive & Thyroid Issues",
-      "Speech & Cognitive Delays",
-      "Behavioural Challenges",
-      "Cardiac Support (complementary)",
-      "Immune Strengthening",
-      "Sleep & Sensory Issues",
-    ],
-    howItHelps: [
-      {
-        title: "Improves Immunity",
-        body: "Children with Down Syndrome are prone to infections. Homeopathy strengthens the immune system, reducing frequency and severity of illness.",
-      },
-      {
-        title: "Enhances Cognitive Function",
-        body: "Specific remedies support brain function, attention, and learning capacity, complementing educational therapies.",
-      },
-      {
-        title: "Holistic Wellbeing",
-        body: "Treatment addresses the whole child — physical health, emotional balance, and developmental progress.",
-      },
-    ],
-    whatToExpect: [
-      "Comprehensive health and developmental assessment",
-      "Individualised remedy based on current health picture",
-      "Improved energy, immunity, and developmental progress",
-      "Regular follow-ups every 4–6 weeks",
-      "Coordinated care alongside other therapies",
-    ],
-  },
   {
     slug: "intellectual-disability",
     title: "Intellectual Disability",
@@ -236,6 +152,8 @@ export const services: Service[] = [
     overview:
       "Congenital blindness and visual impairments present from birth require comprehensive supportive care. While homeopathy cannot reverse structural blindness, it supports overall neurological health, reduces associated complications, and improves quality of life.",
     conditions: [
+      "Autism Spectrum Disorder (ASD)",
+      "Down Syndrome",
       "Congenital Cataracts (post-surgical support)",
       "Optic Nerve Hypoplasia (supportive)",
       "Retinopathy of Prematurity (supportive)",

@@ -25,34 +25,20 @@ export default function FloatingServices() {
         <span className="text-[12px] text-white/40">4.9 / 5 · Based on 1,200+ reviews</span>
       </motion.div>
 
-      {/* Cards grid with perspective tilt */}
-      <div style={{ perspective: "1200px" }}>
-        <motion.div
-          className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-7"
-          style={{ transformStyle: "preserve-3d", rotateX: 4 }}
-          variants={staggerFast}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
-        >
-          {services.map((service, i) => {
-            const total = services.length;
-            const mid = (total - 1) / 2;
-            const rotateY = ((i - mid) / mid) * -10;
-            const translateZ = -Math.abs(i - mid) * 6;
-            return (
-              <motion.div
-                key={service.title}
-                variants={fadeUp}
-                className="flex"
-                style={{ rotateY, translateZ }}
-              >
-                <ServiceCard {...service} />
-              </motion.div>
-            );
-          })}
-        </motion.div>
-      </div>
+      {/* Cards grid */}
+      <motion.div
+        className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+        variants={staggerFast}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-60px" }}
+      >
+        {services.map((service) => (
+          <motion.div key={service.title} variants={fadeUp} className="flex">
+            <ServiceCard {...service} />
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 }
