@@ -27,7 +27,7 @@ export default function FloatingServices() {
 
       {/* Cards grid */}
       <motion.div
-        className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+        className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6"
         variants={staggerFast}
         initial="hidden"
         whileInView="show"

@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   verification: {
     google: "8k14gPNJbUDjiE7hq0INFl4lsM5IumqNl4ZQNjkDmG4",
   },
+  icons: {
+    icon: "/images/logo.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
