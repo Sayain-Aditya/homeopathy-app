@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond } from "next/font/google";
+import Script from "next/script";
 import PageLayout from "@/components/layout/PageLayout";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import WhatsAppFloater from "@/components/ui/WhatsAppFloater";
@@ -24,6 +25,17 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXY5TPJT2S" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZXY5TPJT2S');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.variable} ${cormorant.variable}`}>
         <ScrollProgress />
         <PageLayout>{children}</PageLayout>
