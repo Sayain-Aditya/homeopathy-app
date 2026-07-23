@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   Leaf, BadgeCheck, Phone, Mail, MapPin, Clock,
-  GraduationCap, Heart, ShieldCheck,
+  GraduationCap, Award, Heart, ShieldCheck,
   HeartHandshake, RefreshCw, Star, ChevronRight,
 } from "lucide-react";
 import Container from "@/components/ui/Container";
