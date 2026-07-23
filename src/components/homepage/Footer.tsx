@@ -33,7 +33,7 @@ const nav = [
     items: [],
     contact: [
       { icon: Phone,  text: "6394886307",              href: "tel:6394886307" },
-      { icon: Mail,   text: "care@naivedyahomeo.com",  href: "mailto:care@naivedyahomeo.com" },
+      { icon: Mail,   text: "naivedya.homeopathy@gmail.com",  href: "mailto:naivedya.homeopathy@gmail.com" },
       { icon: MapPin, text: "Offline & Online Consultation", href: "/contact" },
     ],
   },

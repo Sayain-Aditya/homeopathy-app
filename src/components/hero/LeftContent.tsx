@@ -8,7 +8,7 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 const trust = [
   { icon: Users,       label: "10,000+ Patients" },
   { icon: Clock,       label: "Evening 5–7 PM" },
-  { icon: ShieldCheck, label: "BHMS · CGO · CCH" },
+  { icon: ShieldCheck, label: "Homeopathic Consultant" },
 ];
 
 export default function LeftContent() {
@@ -55,7 +55,7 @@ export default function LeftContent() {
         </div>
         <div>
           <p className="text-[15px] font-bold text-white">Dr. Asmita Shekhar</p>
-          <p className="text-[12px] text-white/50">BHMS · CGO · CCH</p>
+          <p className="text-[12px] text-white/50">Homeopathic Consultant</p>
           <p className="mt-0.5 text-[12px] font-semibold text-emerald-400">
             Specialist in Chronic Diseases
           </p>

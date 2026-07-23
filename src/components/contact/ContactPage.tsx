@@ -18,7 +18,7 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "care@naivedyahomeo.com",
+    value: "naivedya.homeopathy@gmail.com",
     sub: "We reply within 24 hours",
   },
   {
@@ -341,7 +341,7 @@ export default function ContactPage() {
                 { icon: MapPin, label: "Location",     value: "Lucknow, Uttar Pradesh" },
                 { icon: Clock,  label: "Timing",       value: "Mon–Sat · Evening 5–7 PM" },
                 { icon: Phone,  label: "Phone",        value: "6394886307" },
-                { icon: Mail,   label: "Email",        value: "care@naivedyahomeo.com" },
+                { icon: Mail,   label: "Email",        value: "naivedya.homeopathy@gmail.com" },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex items-center gap-4 rounded-[20px] border border-[#EEF8F2] bg-[#F9FDFB] px-5 py-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF8F2]">

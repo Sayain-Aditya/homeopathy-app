@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   Leaf, BadgeCheck, Phone, Mail, MapPin, Clock,
-  GraduationCap, Award, Heart, ShieldCheck,
+  GraduationCap, Heart, ShieldCheck,
   HeartHandshake, RefreshCw, Star, ChevronRight,
 } from "lucide-react";
 import Container from "@/components/ui/Container";
@@ -14,9 +14,7 @@ import Footer from "@/components/homepage/Footer";
 import { fadeUp, staggerContainer, slideInRight } from "@/lib/animations";
 
 const credentials = [
-  { icon: GraduationCap, label: "BHMS", sub: "Bachelor of Homoeopathic Medicine & Surgery" },
-  { icon: Award,         label: "CGO",  sub: "Certificate in Gynaecology & Obstetrics" },
-  { icon: BadgeCheck,    label: "CCH",  sub: "Certificate Course in Homoeopathy" },
+  { icon: GraduationCap, label: "Homeopathic Consultant", sub: "Qualified Homoeopathic Practitioner" },
   { icon: ShieldCheck,   label: "Regn. No. H032158", sub: "Registered Homoeopathic Practitioner" },
 ];
 
@@ -157,7 +155,7 @@ export default function AboutPage() {
                 {[
                   { icon: Clock,  text: "Evening 5–7 PM · Sun Closed" },
                   { icon: Phone,  text: "6394886307" },
-                  { icon: Mail,   text: "care@naivedyahomeo.com" },
+                  { icon: Mail,   text: "naivedya.homeopathy@gmail.com" },
                   { icon: MapPin, text: "Offline & Online" },
                 ].map(({ icon: Icon, text }) => (
                   <div key={text} className="flex items-center gap-2 rounded-[999px] border border-[#C8E6D4] bg-white px-4 py-2 text-[12px] font-medium text-[#1D4338]">
@@ -236,7 +234,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <p className="text-[13px] font-bold text-[#1D4338]">Dr. Asmita Shekhar</p>
-                    <p className="text-[11px] text-[#6C9B82]">BHMS · CGO · CCH</p>
+                    <p className="text-[11px] text-[#6C9B82]">Homeopathic Consultant</p>
                   </div>
                 </div>
                 <div className="mt-3 flex items-center gap-1">
@@ -264,7 +262,7 @@ export default function AboutPage() {
               </motion.h2>
 
               <motion.p variants={fadeUp} className="mt-1 text-[15px] font-medium text-[#2D6655]">
-                Homoeopathic Consultant · Specialist in Chronic Diseases
+                Homeopathic Consultant · Specialist in Chronic Diseases
               </motion.p>
 
               <motion.p variants={fadeUp} className="mt-4 text-[14px] leading-8 text-[#6F7D77]">

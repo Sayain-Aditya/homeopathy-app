@@ -57,7 +57,7 @@ export default function DoctorComposition() {
           <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-md">
             <div>
               <p className="text-[13px] font-bold text-white">Dr. Asmita Shekhar</p>
-              <p className="text-[11px] text-white/60">Homoeopathic Consultant</p>
+              <p className="text-[11px] text-white/60">Homeopathic Consultant</p>
             </div>
             <div className="flex items-center gap-1 rounded-full bg-emerald-500/20 px-2.5 py-1">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
