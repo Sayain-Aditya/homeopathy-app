@@ -43,11 +43,24 @@ const faqs = [
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", phone: "", email: "", message: "" });
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        access_key: "cc770a57-b8d8-4575-ba2a-3b7738504399",
+        subject: "New Consultation Request – Naivedya Homeopathy",
+        from_name: form.name,
+        ...form,
+      }),
+    });
+    setLoading(false);
+    if (res.ok) setSubmitted(true);
   }
 
   return (
@@ -208,10 +221,11 @@ export default function ContactPage() {
                     whileHover={{ scale: 1.02, y: -2 }}
                     whileTap={{ scale: 0.97 }}
                     type="submit"
-                    className="flex w-full items-center justify-center gap-2.5 rounded-[999px] bg-gradient-to-r from-[#1D4338] to-[#2D6655] py-4 text-[14px] font-bold text-white shadow-[0_4px_20px_rgba(29,67,56,.20)] transition-shadow hover:shadow-[0_12px_32px_rgba(29,67,56,.30)]"
+                    disabled={loading}
+                    className="flex w-full items-center justify-center gap-2.5 rounded-[999px] bg-gradient-to-r from-[#1D4338] to-[#2D6655] py-4 text-[14px] font-bold text-white shadow-[0_4px_20px_rgba(29,67,56,.20)] transition-shadow hover:shadow-[0_12px_32px_rgba(29,67,56,.30)] disabled:opacity-60"
                   >
                     <Send size={15} />
-                    Send Message
+                    {loading ? "Sending…" : "Send Message"}
                   </motion.button>
                 </form>
               )}
