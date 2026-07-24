@@ -30,7 +30,7 @@ export default function Hero() {
 
       {/* Hero body */}
       <Container>
-        <div className="relative z-10 grid items-center gap-10 py-12 lg:min-h-[calc(100vh-80px)] lg:grid-cols-2 lg:gap-8 lg:py-0">
+        <div className="relative z-10 grid items-center gap-10 pb-6 pt-4 lg:min-h-[calc(100vh-80px)] lg:grid-cols-2 lg:gap-8 lg:py-0">
           {/* Left */}
           <div className="order-2 lg:order-1">
             <LeftContent />
