@@ -13,7 +13,7 @@ export const siteConfig = {
   city: "Lucknow",
   region: "Uttar Pradesh",
   country: "IN",
-  defaultUrl: "https://naivedyahomoeopathy.com",
+  defaultUrl: "https://www.naivedyahomopathy.com",
   googleBusinessProfile:
     "https://www.google.com/search?q=Naivedya%20Advance%20Homoeopathy%20center",
 };

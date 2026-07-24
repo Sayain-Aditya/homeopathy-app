@@ -19,7 +19,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(getSiteUrl()),
+  metadataBase: new URL("https://www.naivedyahomopathy.com"),
   title: {
     default: "Homeopathy in Lucknow | Best Homoeopathy in Lucknow",
     template: `%s | ${siteConfig.shortName}`,
