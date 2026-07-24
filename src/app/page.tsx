@@ -22,9 +22,9 @@ const homepageFaqJsonLd = {
 };
 
 export const metadata = pageMetadata({
-  title: "Homeopathy in Lucknow | Best Homoeopathy in Lucknow",
+  title: "Best Homeopathy in Lucknow | Best Homoeopathy Clinic – Naivedya",
   description:
-    "Searching for homeopathy in Lucknow or the best homoeopathy in Lucknow? Visit Naivedya Advanced Homeopathy Centre, Avas Vikas Colony, Mall Avenue, Lucknow.",
+    "Searching for the best homeopathy in Lucknow? Visit Naivedya Advanced Homeopathy Centre — best homoeopathy clinic in Lucknow — Avas Vikas Colony, Mall Avenue, Lucknow. Consult Dr. Asmita Shekhar today.",
   path: "/",
 });
 

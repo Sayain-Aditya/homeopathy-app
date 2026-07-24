@@ -31,9 +31,9 @@ export const conditionPages: ConditionPage[] = [
     accent: "#0EA5E9",
     bg: "#F0F9FF",
     icon: "Wind",
-    metaTitle: "Homeopathy for Asthma in Lucknow | Best Homoeopathy – Naivedya",
+    metaTitle: "Homeopathy for Asthma in Lucknow | Best Homeopathy in Lucknow – Naivedya",
     metaDescription:
-      "Looking for homeopathy for asthma in Lucknow? Dr. Asmita Shekhar at Naivedya Advanced Homoeopathy Centre offers personalised constitutional treatment for asthma, allergic bronchitis & breathing disorders. Serving Gomti Nagar, Hazratganj, Aliganj & all of Lucknow.",
+      "Looking for the best homeopathy for asthma in Lucknow? Dr. Asmita Shekhar at Naivedya Advanced Homoeopathy Centre — best homeopathy clinic in Lucknow — offers personalised constitutional treatment for asthma, allergic bronchitis & breathing disorders. Serving Gomti Nagar, Hazratganj, Aliganj & all of Lucknow.",
     overview:
       "Asthma is a chronic respiratory condition causing recurrent episodes of wheezing, breathlessness, chest tightness, and coughing. Homeopathy offers deep constitutional treatment that addresses the root cause — reducing frequency, severity, and dependence on inhalers over time.",
     symptoms: [
@@ -96,9 +96,9 @@ export const conditionPages: ConditionPage[] = [
     accent: "#EC4899",
     bg: "#FDF2F8",
     icon: "Sparkles",
-    metaTitle: "Homeopathy for Skin Disease in Lucknow | Best Homoeopathy – Naivedya",
+    metaTitle: "Homeopathy for Skin Disease in Lucknow | Best Homeopathy in Lucknow – Naivedya",
     metaDescription:
-      "Searching for homeopathy for skin disease in Lucknow? Naivedya Advanced Homoeopathy Centre offers expert treatment for eczema, psoriasis, urticaria, acne & more. Dr. Asmita Shekhar, serving Gomti Nagar, Hazratganj, Aliganj & all of Lucknow.",
+      "Searching for the best homeopathy for skin disease in Lucknow? Naivedya Advanced Homoeopathy Centre — best homeopathy clinic in Lucknow — offers expert treatment for eczema, psoriasis, urticaria, acne & more. Dr. Asmita Shekhar, serving Gomti Nagar, Hazratganj, Aliganj & all of Lucknow.",
     overview:
       "Skin diseases like eczema, psoriasis, urticaria, and acne are often rooted in internal imbalances. Homeopathy treats the whole person — addressing the underlying constitutional cause — rather than suppressing symptoms with topical creams, leading to lasting skin health.",
     symptoms: [
@@ -161,9 +161,9 @@ export const conditionPages: ConditionPage[] = [
     accent: "#8B5CF6",
     bg: "#F5F3FF",
     icon: "Heart",
-    metaTitle: "Homeopathy for PCOD in Lucknow | Best Homoeopathy for PCOS – Naivedya",
+    metaTitle: "Homeopathy for PCOD in Lucknow | Best Homeopathy for PCOS in Lucknow – Naivedya",
     metaDescription:
-      "Looking for homeopathy for PCOD in Lucknow? Dr. Asmita Shekhar at Naivedya Advanced Homoeopathy Centre offers natural, constitutional treatment for PCOS, irregular periods, hormonal imbalance & infertility. Serving Gomti Nagar, Hazratganj, Aliganj & all of Lucknow.",
+      "Looking for the best homeopathy for PCOD in Lucknow? Dr. Asmita Shekhar at Naivedya Advanced Homoeopathy Centre — best homeopathy clinic in Lucknow — offers natural constitutional treatment for PCOS, irregular periods, hormonal imbalance & infertility. Serving Gomti Nagar, Hazratganj, Aliganj & all of Lucknow.",
     overview:
       "Polycystic Ovarian Disease (PCOD/PCOS) is a hormonal disorder affecting women of reproductive age, causing irregular periods, cysts on ovaries, weight gain, acne, and fertility challenges. Homeopathy offers a safe, natural approach to restore hormonal balance without hormonal pills or surgery.",
     symptoms: [
@@ -226,9 +226,9 @@ export const conditionPages: ConditionPage[] = [
     accent: "#F59E0B",
     bg: "#FFFBEB",
     icon: "Baby",
-    metaTitle: "Child Homeopathy in Lucknow | Best Homoeopathy for Children – Naivedya",
+    metaTitle: "Child Homeopathy in Lucknow | Best Homeopathy for Children in Lucknow – Naivedya",
     metaDescription:
-      "Looking for child homeopathy in Lucknow? Dr. Asmita Shekhar at Naivedya Advanced Homoeopathy Centre specialises in homeopathic treatment for children — developmental delays, recurrent infections, autism, behavioural issues & more. Serving Gomti Nagar, Hazratganj, Aliganj & all of Lucknow.",
+      "Looking for the best child homeopathy in Lucknow? Dr. Asmita Shekhar at Naivedya Advanced Homoeopathy Centre — best homeopathy clinic in Lucknow — specialises in homeopathic treatment for children — developmental delays, recurrent infections, autism, behavioural issues & more. Serving Gomti Nagar, Hazratganj, Aliganj & all of Lucknow.",
     overview:
       "Children respond beautifully to homeopathic treatment because of their strong vital force. Homeopathy is safe, gentle, and free from side effects — making it ideal for infants, toddlers, and growing children. Dr. Asmita Shekhar has extensive experience treating a wide range of childhood conditions.",
     symptoms: [

@@ -29,7 +29,7 @@ export function absoluteUrl(path = "/") {
 }
 
 export const defaultDescription =
-  "Looking for homeopathy in Lucknow or the best homoeopathy in Lucknow? Consult Dr. Asmita Shekhar at Naivedya Advanced Homeopathy Centre, Avas Vikas Colony, Mall Avenue, Lucknow.";
+  "Looking for the best homeopathy in Lucknow? Consult Dr. Asmita Shekhar at Naivedya Advanced Homeopathy Centre — best homoeopathy clinic in Lucknow — Avas Vikas Colony, Mall Avenue, Lucknow.";
 
 type PageSeo = {
   title: string;
@@ -94,8 +94,8 @@ export function pageMetadata({ title, description, path, keywords = [] }: PageSe
 
 export const serviceSeo = services.map((service) => ({
   slug: service.slug,
-  title: `${service.title} Homeopathy in Lucknow | Best Homoeopathy in Lucknow`,
-  description: `${service.desc} Consult ${siteConfig.doctor} for personalized ${service.title.toLowerCase()} care at ${siteConfig.shortName}, a trusted choice for homeopathy in Lucknow.`,
+  title: `${service.title} | Best Homeopathy in Lucknow – Naivedya`,
+  description: `Looking for the best homeopathy in Lucknow for ${service.title.toLowerCase()}? ${service.desc} Consult ${siteConfig.doctor} at ${siteConfig.shortName} — best homoeopathy clinic in Lucknow.`,
   path: `/services/${service.slug}`,
 }));
 
