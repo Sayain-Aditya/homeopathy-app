@@ -8,6 +8,25 @@ import Container from "@/components/ui/Container";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const faqs = [
+  {
+    q: "Do you provide homeopathy in Lucknow?",
+    a: (
+      <>
+        Yes. Naivedya Advanced Homoeopathy Centre offers in-clinic and online{" "}
+        <strong>homeopathy in Lucknow</strong> with Dr. Asmita Shekhar.
+      </>
+    ),
+  },
+  {
+    q: "Why choose Naivedya for best homoeopathy in Lucknow?",
+    a: (
+      <>
+        Patients choose Naivedya for <strong>best homoeopathy in Lucknow</strong>{" "}
+        through personalized case-taking, chronic disease experience, safe
+        remedies, and regular follow-up care.
+      </>
+    ),
+  },
   { q: "Is homeopathy safe?",                         a: "Yes. Homeopathic medicines are gentle, non-invasive, and generally considered safe when prescribed by a qualified practitioner." },
   { q: "How long does treatment take?",               a: "The duration depends on the condition, its severity, and individual response. Acute conditions may improve quickly, while chronic illnesses often require longer-term care." },
   { q: "Can children take homeopathic medicines?",    a: "Absolutely. Homeopathy is widely used for infants and children because of its gentle nature." },

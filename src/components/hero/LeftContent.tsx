@@ -6,9 +6,9 @@ import Link from "next/link";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const trust = [
-  { icon: Users,       label: "10,000+ Patients" },
-  { icon: Clock,       label: "Evening 5–7 PM" },
-  { icon: ShieldCheck, label: "Homeopathic Consultant" },
+  { icon: Users, label: "10,000+ Patients" },
+  { icon: Clock, label: "Evening 5-7 PM" },
+  { icon: ShieldCheck, label: "Homeopathy in Lucknow" },
 ];
 
 export default function LeftContent() {
@@ -19,7 +19,6 @@ export default function LeftContent() {
       initial="hidden"
       animate="show"
     >
-      {/* Badge */}
       <motion.div
         variants={fadeUp}
         className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 backdrop-blur-sm"
@@ -33,19 +32,17 @@ export default function LeftContent() {
         </span>
       </motion.div>
 
-      {/* Headline */}
       <motion.h1
         variants={fadeUp}
         className="mt-6 text-[38px] font-extrabold leading-[1.05] tracking-[-2px] text-white sm:text-[50px] lg:text-[64px]"
       >
-        Natural Healing
+        <strong>Best Homoeopathy</strong>
         <br />
         <span className="bg-gradient-to-r from-[#6C9B82] to-[#A8D5B5] bg-clip-text text-transparent">
-          From Within
+          in Lucknow
         </span>
       </motion.h1>
 
-      {/* Doctor card */}
       <motion.div
         variants={fadeUp}
         className="mt-6 flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-sm"
@@ -62,17 +59,15 @@ export default function LeftContent() {
         </div>
       </motion.div>
 
-      {/* Subtitle */}
       <motion.p
         variants={fadeUp}
         className="mt-5 max-w-[460px] text-[15px] leading-[1.9] text-white/60"
       >
-        Personalized homoeopathic care that treats the root cause — not just the
-        symptoms. Safe, gentle, and tailored to your unique health journey.
-        Offline &amp; online consultation available.
+        Searching for <strong className="font-bold text-white/85">homeopathy in Lucknow</strong>? Get personalized homoeopathic care
+        that treats the root cause - not just the symptoms. Safe, gentle,
+        and available through offline &amp; online consultation.
       </motion.p>
 
-      {/* CTAs */}
       <motion.div variants={fadeUp} className="mt-8 flex flex-wrap items-center gap-3">
         <Link
           href="/contact"
@@ -90,19 +85,18 @@ export default function LeftContent() {
         </a>
       </motion.div>
 
-      {/* Trust row */}
       <motion.div variants={fadeUp} className="mt-8 flex flex-wrap items-center gap-5 border-t border-white/10 pt-6">
         {trust.map(({ icon: Icon, label }) => (
           <div key={label} className="flex items-center gap-2">
             <div className="flex h-7 w-7 items-center justify-center rounded-full bg-white/5">
               <Icon size={13} className="text-emerald-400" />
             </div>
-            <span className="text-[12px] font-medium text-white/50">{label}</span>
+            <span className="text-[12px] font-medium text-white/50">
+              {label === "Homeopathy in Lucknow" ? <strong>{label}</strong> : label}
+            </span>
           </div>
         ))}
       </motion.div>
-
-
     </motion.div>
   );
 }

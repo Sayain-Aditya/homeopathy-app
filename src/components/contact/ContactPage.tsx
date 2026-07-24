@@ -23,9 +23,9 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    label: "Consultation",
-    value: "Offline & Online",
-    sub: "In-clinic or video call",
+    label: "Clinic Address",
+    value: "Avas Vikas Colony",
+    sub: "Mall Avenue, Lucknow",
   },
   {
     icon: Clock,
@@ -102,8 +102,9 @@ export default function ContactPage() {
               variants={fadeUp}
               className="mx-auto mt-4 max-w-[480px] text-[15px] leading-[1.9] text-[#6F7D77]"
             >
-              Reach out to book a consultation, ask a question, or simply learn
-              more about how homeopathy can help you.
+              Reach out to book a consultation at Naivedya Advanced Homeopathy
+              Centre, Avas Vikas Colony, Mall Avenue, Lucknow, or ask how
+              homeopathy can help you.
             </motion.p>
           </motion.div>
         </Container>
@@ -338,7 +339,7 @@ export default function ContactPage() {
             {/* Info row below map */}
             <motion.div variants={fadeUp} className="mt-6 grid gap-4 sm:grid-cols-4">
               {[
-                { icon: MapPin, label: "Location",     value: "Lucknow, Uttar Pradesh" },
+                { icon: MapPin, label: "Location",     value: "Avas Vikas Colony, Mall Avenue, Lucknow" },
                 { icon: Clock,  label: "Timing",       value: "Mon–Sat · Evening 5–7 PM" },
                 { icon: Phone,  label: "Phone",        value: "6394886307" },
                 { icon: Mail,   label: "Email",        value: "naivedya.homeopathy@gmail.com" },

@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { X, MessageCircle } from "lucide-react";
+import { X } from "lucide-react";
 
 const PHONE = "916394886307";
 const MESSAGE = "Hello! I'd like to book a consultation at Naivedya Homoeopathy.";

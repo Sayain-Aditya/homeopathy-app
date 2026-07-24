@@ -27,7 +27,10 @@ export default function Navbar({ variant = "dark" }: NavbarProps) {
 
   const isLight = variant === "light";
 
-  useEffect(() => { setMounted(true); }, []);
+  useEffect(() => {
+    const id = window.setTimeout(() => setMounted(true), 0);
+    return () => window.clearTimeout(id);
+  }, []);
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 10);
@@ -35,7 +38,10 @@ export default function Navbar({ variant = "dark" }: NavbarProps) {
     return () => window.removeEventListener("scroll", fn);
   }, []);
 
-  useEffect(() => { setMenuOpen(false); }, [pathname]);
+  useEffect(() => {
+    const id = window.setTimeout(() => setMenuOpen(false), 0);
+    return () => window.clearTimeout(id);
+  }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";

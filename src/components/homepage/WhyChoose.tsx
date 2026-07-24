@@ -7,29 +7,35 @@ import Container from "@/components/ui/Container";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const features = [
-  { icon: Leaf,           title: "Natural Healing",        description: "Safe remedies made from natural substances with zero harmful side effects." },
+  { icon: Leaf, title: "Natural Healing", description: "Safe remedies made from natural substances with zero harmful side effects." },
   { icon: HeartHandshake, title: "Personalized Treatment", description: "Every plan is customized based on your symptoms, lifestyle, and medical history." },
-  { icon: ShieldCheck,    title: "Safe for All Ages",      description: "Suitable for infants, children, adults, pregnant women, and senior citizens." },
-  { icon: RefreshCw,      title: "Long-Term Relief",       description: "Addresses the root cause to reduce recurring health issues permanently." },
+  { icon: ShieldCheck, title: "Safe for All Ages", description: "Suitable for infants, children, adults, pregnant women, and senior citizens." },
+  { icon: RefreshCw, title: "Long-Term Relief", description: "Addresses the root cause to reduce recurring health issues permanently." },
 ];
 
 export default function WhyChoose() {
   return (
     <section className="relative overflow-hidden bg-[#0A2318] py-16 lg:py-24">
-      {/* Background orbs */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -right-40 top-0 h-[400px] w-[400px] rounded-full opacity-15"
-          style={{ background: "radial-gradient(circle, #2D6655, transparent 70%)" }} />
-        <div className="absolute -left-20 bottom-0 h-[300px] w-[300px] rounded-full opacity-10"
-          style={{ background: "radial-gradient(circle, #1D4338, transparent 70%)" }} />
-        <div className="absolute inset-0 opacity-[0.025]"
-          style={{ backgroundImage: "linear-gradient(#6C9B82 1px, transparent 1px), linear-gradient(90deg, #6C9B82 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
+        <div
+          className="absolute -right-40 top-0 h-[400px] w-[400px] rounded-full opacity-15"
+          style={{ background: "radial-gradient(circle, #2D6655, transparent 70%)" }}
+        />
+        <div
+          className="absolute -left-20 bottom-0 h-[300px] w-[300px] rounded-full opacity-10"
+          style={{ background: "radial-gradient(circle, #1D4338, transparent 70%)" }}
+        />
+        <div
+          className="absolute inset-0 opacity-[0.025]"
+          style={{
+            backgroundImage: "linear-gradient(#6C9B82 1px, transparent 1px), linear-gradient(90deg, #6C9B82 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
       </div>
 
       <Container>
         <div className="relative grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-
-          {/* Left */}
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -42,16 +48,17 @@ export default function WhyChoose() {
             </motion.div>
 
             <motion.h2 variants={fadeUp} className="mt-5 text-[36px] font-extrabold leading-[1.05] tracking-[-1.5px] text-white sm:text-[44px] lg:text-[52px]">
-              Why Thousands
+              Why Choose
               <br />
               <span className="bg-gradient-to-r from-[#6C9B82] to-[#A8D5B5] bg-clip-text text-transparent">
-                Choose Homeopathy
+                <strong>Homeopathy in Lucknow</strong>
               </span>
             </motion.h2>
 
             <motion.p variants={fadeUp} className="mt-5 max-w-[420px] text-[15px] leading-[1.9] text-white/60">
-              Homeopathy stimulates your body&apos;s own healing ability, treating the
-              individual as a whole — providing long-term wellness with gentle, safe remedies.
+              If you are looking for <strong className="font-bold text-white/85">the best homoeopathy in Lucknow</strong>, Naivedya
+              focuses on careful case-taking, root-cause treatment, and gentle
+              remedies selected for your complete health picture.
             </motion.p>
 
             <motion.div variants={fadeUp}>
@@ -63,7 +70,6 @@ export default function WhyChoose() {
               </Link>
             </motion.div>
 
-            {/* Stats */}
             <motion.div variants={fadeUp} className="mt-10 flex gap-8 border-t border-white/10 pt-8">
               {[["10K+", "Happy Patients"], ["15+", "Years Experience"], ["95%", "Satisfaction"]].map(([val, lbl]) => (
                 <div key={lbl}>
@@ -74,7 +80,6 @@ export default function WhyChoose() {
             </motion.div>
           </motion.div>
 
-          {/* Right — 2×2 grid */}
           <motion.div
             className="grid grid-cols-2 gap-4"
             variants={staggerContainer}
@@ -100,7 +105,6 @@ export default function WhyChoose() {
               );
             })}
           </motion.div>
-
         </div>
       </Container>
     </section>

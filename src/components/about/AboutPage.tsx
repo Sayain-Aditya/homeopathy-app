@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Leaf, BadgeCheck, Phone, Mail, MapPin, Clock,
+  Leaf, Phone, Mail, MapPin, Clock,
   GraduationCap, Award, Heart, ShieldCheck,
   HeartHandshake, RefreshCw, Star, ChevronRight,
 } from "lucide-react";
@@ -156,7 +156,7 @@ export default function AboutPage() {
                   { icon: Clock,  text: "Evening 5–7 PM · Sun Closed" },
                   { icon: Phone,  text: "6394886307" },
                   { icon: Mail,   text: "naivedya.homeopathy@gmail.com" },
-                  { icon: MapPin, text: "Offline & Online" },
+                  { icon: MapPin, text: "Avas Vikas Colony, Mall Avenue, Lucknow" },
                 ].map(({ icon: Icon, text }) => (
                   <div key={text} className="flex items-center gap-2 rounded-[999px] border border-[#C8E6D4] bg-white px-4 py-2 text-[12px] font-medium text-[#1D4338]">
                     <Icon size={12} className="text-[#2D6655]" />
@@ -211,7 +211,7 @@ export default function AboutPage() {
             >
               <div className="overflow-hidden rounded-[32px] shadow-[0_20px_60px_rgba(18,45,36,.15)]">
                 <Image
-                  src="/images/Profile image.png"
+                  src="/images/profile-image.webp"
                   alt="Dr. Asmita Shekhar"
                   width={600}
                   height={520}
@@ -275,7 +275,7 @@ export default function AboutPage() {
               <motion.p variants={fadeUp} className="mt-3 text-[14px] leading-8 text-[#6F7D77]">
                 Her approach is deeply patient-centric — she takes time to understand
                 not just the disease, but the person behind it. Every prescription is
-                carefully individualized, considering the patient's physical symptoms,
+                carefully individualized, considering the patient&apos;s physical symptoms,
                 emotional state, and personal history.
               </motion.p>
 
@@ -447,7 +447,7 @@ export default function AboutPage() {
             {/* Info row below map */}
             <motion.div variants={fadeUp} className="mt-6 grid gap-4 sm:grid-cols-3">
               {[
-                { icon: MapPin, label: "Location",  value: "Lucknow, Uttar Pradesh" },
+                { icon: MapPin, label: "Location",  value: "Avas Vikas Colony, Mall Avenue, Lucknow" },
                 { icon: Clock,  label: "Timing",    value: "Mon–Sat · Evening 5–7 PM" },
                 { icon: Phone,  label: "Phone",     value: "6394886307" },
               ].map(({ icon: Icon, label, value }) => (

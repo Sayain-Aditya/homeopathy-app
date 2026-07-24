@@ -1,6 +1,6 @@
 "use client";
 
-import { Globe, Mail, Share2, MessageCircle, Heart, Phone, MapPin } from "lucide-react";
+import { Globe, Mail, Share2, MessageCircle, Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,20 +12,19 @@ const nav = [
       { label: "Home",       href: "/" },
       { label: "About Us",   href: "/about" },
       { label: "Services",   href: "/services" },
-      { label: "Conditions", href: "/conditions" },
-      { label: "Remedies",   href: "/remedies" },
+      { label: "Conditions", href: "/services" },
+      { label: "Contact",    href: "/contact" },
     ],
   },
   {
     heading: "Treatments",
     items: [
-      { label: "Asthma",       href: "/conditions" },
-      { label: "Allergies",    href: "/conditions" },
-      { label: "Thyroid",      href: "/conditions" },
-      { label: "Skin Diseases",href: "/conditions" },
-      { label: "Hypertension", href: "/conditions" },
-      { label: "Joint Pains",  href: "/conditions" },
-      { label: "Epilepsy",     href: "/conditions" },
+      { label: "Child Development", href: "/services/neuro-child-development" },
+      { label: "Mental Wellness",   href: "/services/mental-wellness" },
+      { label: "Women's Health",    href: "/services/womens-health" },
+      { label: "Skin Diseases",     href: "/services/skin-care" },
+      { label: "Respiratory Care",  href: "/services/respiratory" },
+      { label: "Digestive Health",  href: "/services/digestive-health" },
     ],
   },
   {
@@ -34,16 +33,16 @@ const nav = [
     contact: [
       { icon: Phone,  text: "6394886307",              href: "tel:6394886307" },
       { icon: Mail,   text: "naivedya.homeopathy@gmail.com",  href: "mailto:naivedya.homeopathy@gmail.com" },
-      { icon: MapPin, text: "Offline & Online Consultation", href: "/contact" },
+      { icon: MapPin, text: "Avas Vikas Colony, Mall Avenue, Lucknow", href: "/contact" },
     ],
   },
 ];
 
 const socials = [
-  { icon: Globe,         label: "Website" },
-  { icon: MessageCircle, label: "Message" },
-  { icon: Mail,          label: "Email" },
-  { icon: Share2,        label: "Share" },
+  { icon: Globe,         label: "Website", href: "/" },
+  { icon: MessageCircle, label: "Message", href: "https://wa.me/916394886307" },
+  { icon: Mail,          label: "Email", href: "mailto:naivedya.homeopathy@gmail.com" },
+  { icon: Share2,        label: "Contact", href: "/contact" },
 ];
 
 const fadeUp = {
@@ -94,16 +93,17 @@ export default function Footer() {
               </div>
             </Link>
             <p className="mt-4 text-[13px] leading-7 text-[#5A7070]">
-              Advanced Homoeopathy Centre by Dr. Asmita Shekhar.
+              Naivedya Advanced Homeopathy Centre by Dr. Asmita Shekhar.
+              Avas Vikas Colony, Mall Avenue, Lucknow.
               Evening 5–7 PM · Sunday Closed · Regn. No. H032158
             </p>
 
             {/* Social icons */}
             <div className="mt-6 flex gap-2">
-              {socials.map(({ icon: Icon, label }) => (
+              {socials.map(({ icon: Icon, label, href }) => (
                 <motion.a
                   key={label}
-                  href="#"
+                  href={href}
                   aria-label={label}
                   whileHover={{ scale: 1.12 }}
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-[#2A3838] text-[#5A7070] transition-colors hover:border-[#2D6655] hover:bg-[#2D6655] hover:text-white"
