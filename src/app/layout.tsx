@@ -70,10 +70,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: "/logo.ico", type: "image/x-icon" },
       { url: "/images/logo.png", type: "image/png" },
     ],
     apple: "/images/logo.png",
-    shortcut: "/images/logo.png",
+    shortcut: "/logo.ico",
   },
 };
 
