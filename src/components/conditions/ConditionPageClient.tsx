@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, ChevronDown, ChevronRight, Leaf, MapPin, Phone } from "lucide-react";
+import { CheckCircle2, ChevronDown, ChevronRight, Leaf, MapPin, Phone, Wind, Sparkles, Heart, Baby } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Navbar from "@/components/layout/Navbar";
@@ -10,9 +11,11 @@ import Footer from "@/components/homepage/Footer";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 import type { ConditionPage } from "@/lib/conditionPages";
 
+const iconMap: Record<string, LucideIcon> = { Wind, Sparkles, Heart, Baby };
+
 export default function ConditionPageClient({ page }: { page: ConditionPage }) {
   const [open, setOpen] = useState<number | null>(0);
-  const Icon = page.icon;
+  const Icon = iconMap[page.icon];
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#EEF8F2]">
