@@ -17,12 +17,6 @@ export default function FloatingServices() {
         viewport={{ once: true }}
         className="mb-5 flex items-center gap-2 border-t border-white/10 pt-6"
       >
-        <div className="flex">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} size={13} className="text-amber-400" fill="currentColor" />
-          ))}
-        </div>
-        <span className="text-[12px] text-white/40">4.9 / 5 · Based on 1,200+ reviews</span>
       </motion.div>
 
       {/* Cards grid */}
