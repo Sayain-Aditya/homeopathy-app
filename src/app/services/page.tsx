@@ -2,10 +2,11 @@ import { pageMetadata } from "@/lib/seo";
 import ServicesClient from "./ServicesClient";
 
 export const metadata = pageMetadata({
-  title: "Homeopathy Services in Lucknow | Best Homoeopathy in Lucknow",
+  title: "Naivedya Homeopathy Services in Lucknow | Best Homoeopathy",
   description:
-    "Explore homeopathy in Lucknow for child development, mental wellness, women's health, skin care, respiratory concerns, and digestive health at Naivedya Homoeopathy.",
+    "Explore Naivedya homeopathy services in Lucknow for child development, mental wellness, women's health, skin care, respiratory concerns, and digestive health.",
   path: "/services",
+  keywords: ["Naivedya services", "Naivedya treatments", "Naivedya homeopathy services"],
 });
 
 export default function ServicesPage() {

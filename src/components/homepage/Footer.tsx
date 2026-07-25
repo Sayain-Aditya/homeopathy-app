@@ -19,11 +19,11 @@ const nav = [
   {
     heading: "Treatments",
     items: [
-      { label: "Child Development", href: "/services/neuro-child-development" },
+      { label: "Child Homeopathy", href: "/child-homeopathy-in-lucknow" },
       { label: "Mental Wellness",   href: "/services/mental-wellness" },
-      { label: "Women's Health",    href: "/services/womens-health" },
-      { label: "Skin Diseases",     href: "/services/skin-care" },
-      { label: "Respiratory Care",  href: "/services/respiratory" },
+      { label: "PCOD Homeopathy",   href: "/homeopathy-for-pcod-in-lucknow" },
+      { label: "Skin Diseases",     href: "/homeopathy-for-skin-disease-in-lucknow" },
+      { label: "Asthma Homeopathy", href: "/homeopathy-for-asthma-in-lucknow" },
       { label: "Digestive Health",  href: "/services/digestive-health" },
     ],
   },

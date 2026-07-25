@@ -36,10 +36,10 @@ export default function LeftContent() {
         variants={fadeUp}
         className="mt-6 text-[38px] font-extrabold leading-[1.05] tracking-[-2px] text-white sm:text-[50px] lg:text-[64px]"
       >
-        <strong>Best Homoeopathy</strong>
+        <strong>Naivedya Homoeopathy</strong>
         <br />
         <span className="bg-gradient-to-r from-[#6C9B82] to-[#A8D5B5] bg-clip-text text-transparent">
-          in Lucknow
+          Best in Lucknow
         </span>
       </motion.h1>
 

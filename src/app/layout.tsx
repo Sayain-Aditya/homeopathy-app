@@ -19,9 +19,9 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.naivedyahomopathy.com"),
+  metadataBase: new URL(getSiteUrl()),
   title: {
-    default: "Homeopathy in Lucknow | Best Homoeopathy in Lucknow",
+    default: "Naivedya | Homeopathy in Lucknow | Best Homoeopathy in Lucknow",
     template: `%s | ${siteConfig.shortName}`,
   },
   description: defaultDescription,
@@ -37,6 +37,8 @@ export const metadata: Metadata = {
     "homoeopathy clinic in Lucknow",
     "Dr Asmita Shekhar",
     "Naivedya Homoeopathy",
+    "Naivedya",
+    "Naivedya Advanced Homeopathy Centre",
     "homeopathic doctor Lucknow",
     "online homeopathy consultation",
   ],
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Homeopathy in Lucknow | Best Homoeopathy in Lucknow",
+    title: "Naivedya | Homeopathy in Lucknow | Best Homoeopathy in Lucknow",
     description: defaultDescription,
     url: "/",
     siteName: siteConfig.name,
@@ -64,7 +66,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Homeopathy in Lucknow | Best Homoeopathy in Lucknow",
+    title: "Naivedya | Homeopathy in Lucknow | Best Homoeopathy in Lucknow",
     description: defaultDescription,
     images: ["/images/logo.png"],
   },

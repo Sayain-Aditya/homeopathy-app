@@ -14,7 +14,7 @@ const categories = [
     bg: "rgba(99,102,241,0.08)",
     title: "Mental Wellness",
     items: ["Stress", "Anxiety", "Depression", "Insomnia"],
-    href: "/services",
+    href: "/services/mental-wellness",
   },
   {
     icon: Flower2,
@@ -22,7 +22,7 @@ const categories = [
     bg: "rgba(236,72,153,0.08)",
     title: "Women's Health",
     items: ["PCOS", "Menstrual Disorders", "Menopause", "Hormonal Imbalance"],
-    href: "/services",
+    href: "/homeopathy-for-pcod-in-lucknow",
   },
   {
     icon: Sparkles,
@@ -30,7 +30,7 @@ const categories = [
     bg: "rgba(16,185,129,0.08)",
     title: "Skin Care",
     items: ["Acne", "Psoriasis", "Eczema", "Vitiligo"],
-    href: "/services",
+    href: "/homeopathy-for-skin-disease-in-lucknow",
   },
   {
     icon: Wind,
@@ -38,7 +38,7 @@ const categories = [
     bg: "rgba(14,165,233,0.08)",
     title: "Respiratory",
     items: ["Asthma", "Sinusitis", "Allergic Rhinitis", "Bronchitis"],
-    href: "/services",
+    href: "/homeopathy-for-asthma-in-lucknow",
   },
   {
     icon: Salad,
@@ -119,8 +119,8 @@ export default function ConditionsWeTreat() {
               })}
             </div>
 
-            <Link href="/services" className="mt-5 flex items-center gap-1 text-[12px] font-semibold text-[#F59E0B] transition-colors duration-200 hover:text-amber-600">
-              View All Conditions <ChevronRight size={13} />
+            <Link href="/child-homeopathy-in-lucknow" className="mt-5 flex items-center gap-1 text-[12px] font-semibold text-[#F59E0B] transition-colors duration-200 hover:text-amber-600">
+              Child Homeopathy in Lucknow <ChevronRight size={13} />
             </Link>
           </motion.div>
 
@@ -155,7 +155,7 @@ export default function ConditionsWeTreat() {
                 </ul>
 
                 <Link href={cat.href} className="mt-5 flex items-center gap-1 text-[12px] font-semibold transition-colors duration-200" style={{ color: cat.accent }}>
-                  Book Consultation <ChevronRight size={13} />
+                  Learn More <ChevronRight size={13} />
                 </Link>
               </motion.div>
             );

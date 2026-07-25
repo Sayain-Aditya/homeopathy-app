@@ -13,7 +13,7 @@ export const siteConfig = {
   city: "Lucknow",
   region: "Uttar Pradesh",
   country: "IN",
-  defaultUrl: "https://www.naivedyahomopathy.com",
+  defaultUrl: "https://www.naivedyahomeopathy.com",
   googleBusinessProfile:
     "https://www.google.com/search?q=Naivedya%20Advance%20Homoeopathy%20center",
 };
@@ -29,7 +29,7 @@ export function absoluteUrl(path = "/") {
 }
 
 export const defaultDescription =
-  "Looking for the best homeopathy in Lucknow? Consult Dr. Asmita Shekhar at Naivedya Advanced Homeopathy Centre — best homoeopathy clinic in Lucknow — Avas Vikas Colony, Mall Avenue, Lucknow.";
+  "Looking for Naivedya, homeopathy in Lucknow, or the best homoeopathy in Lucknow? Consult Dr. Asmita Shekhar at Naivedya Advanced Homeopathy Centre, Avas Vikas Colony, Mall Avenue, Lucknow.";
 
 type PageSeo = {
   title: string;
@@ -39,6 +39,13 @@ type PageSeo = {
 };
 
 export const targetKeywords = [
+  "Naivedya",
+  "Naivedya Lucknow",
+  "Naivedya Homeopathy",
+  "Naivedya Homoeopathy",
+  "Naivedya Advanced Homeopathy Centre",
+  "Naivedya Advanced Homoeopathy Centre",
+  "Naivedya Advance Homoeopathy center",
   "Homeopathy in Lucknow",
   "best homoeopathy in Lucknow",
   "best homeopathy in Lucknow",
@@ -47,10 +54,6 @@ export const targetKeywords = [
   "homoeopathy clinic in Lucknow",
   "homeopathic doctor in Lucknow",
   "Dr Asmita Shekhar",
-  "Naivedya Homoeopathy",
-  "Naivedya Advanced Homeopathy Centre",
-  "Naivedya Advanced Homoeopathy Centre",
-  "Naivedya Advance Homoeopathy center",
   "Mall Avenue Lucknow",
   "Avas Vikas Colony Lucknow",
 ];
@@ -94,8 +97,8 @@ export function pageMetadata({ title, description, path, keywords = [] }: PageSe
 
 export const serviceSeo = services.map((service) => ({
   slug: service.slug,
-  title: `${service.title} | Best Homeopathy in Lucknow – Naivedya`,
-  description: `Looking for the best homeopathy in Lucknow for ${service.title.toLowerCase()}? ${service.desc} Consult ${siteConfig.doctor} at ${siteConfig.shortName} — best homoeopathy clinic in Lucknow.`,
+  title: `${service.title} | Naivedya Best Homeopathy in Lucknow`,
+  description: `Looking for Naivedya or the best homeopathy in Lucknow for ${service.title.toLowerCase()}? ${service.desc} Consult ${siteConfig.doctor} at ${siteConfig.shortName}.`,
   path: `/services/${service.slug}`,
 }));
 
